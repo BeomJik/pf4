@@ -1,0 +1,164 @@
+/* ////////// 타이틀영역 ////////// */
+#title{
+  height: 100%;
+}
+#title .wrap{
+  width: 100%; 
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  background:linear-gradient(#00000014, #00000014), url(../img/hj_title.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 60%;
+  display: flex; /* 자식 정렬 */
+  flex-direction: column; /* 수직 정렬 */
+  justify-content: center; /* 중앙 정렬 */
+  color: #fff;
+  z-index: -1;
+}
+#title hgroup{
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#title h2{
+  font-size: 150px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 3px 3px 3px #296f7a85;
+  width: fit-content;
+  transition: all 0.5s;
+}
+#title h2:nth-child(1){
+  animation-name: fallh2;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  
+}
+@keyframes fallh2{
+  0%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
+#title h2 span{
+  animation-name: uph2;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes uph2{
+  0%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+#title h3{  
+  font-weight: 900;
+  font-size: 200px;
+  transition: all 0.2s;
+  text-shadow: 5px 5px 5px #296f7a85;
+}
+#title h3{
+  animation-name: slideh3;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes slideh3{
+  0%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+#title h2::after{ /* h2와 p 사이 세로 선 */
+  /*! content: ""; */
+  width: 1px;
+  height: 45px;
+  background-color: #ffffffd4;
+  display: block; 
+  margin: 15px auto 5px auto;
+}
+#title p{
+  line-height: 1.4;
+  margin: 0 0 80px 0;
+  font-size: 0;
+  font-weight: 400;
+}
+#title p::after{
+  /*! content: ""; */
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+  margin: 0px auto;
+  position: relative;
+  top: 30px;
+}
+#title button{
+  border: none;
+  /*! width: 90px; */
+  /*! height: 50px; */
+  background-color: #17a8ca80;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s; 
+  font-size: 0;
+}
+#title button:hover{ /* 버튼 색 변화 */
+  background-color: #00ff347a;
+}
+#title button::before{ /* 버튼 상단 삼각형 */
+  /*! content: ""; */
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 25px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 25px solid #17a8ca80;
+  border-left: 45px solid transparent;
+  position: absolute;
+  left: 0;
+  top: -50px;
+  transition: all 0.5s;
+}
+#title button:hover::before{ /* 버튼 상단 삼각형 색변화 */
+   border-bottom: 25px solid #00ff347a;
+}
+#title button::after{ /* 버튼 하단 삼각형 */
+  /*! content: ""; */
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 25px solid #17a8ca80;
+  border-right: 45px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 45px solid transparent;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  transition: all 0.5s;
+}
+#title button:hover::after{ /* 버튼 하단 삼각형 색변화 */
+   border-top: 25px solid #00ff347a;
+}

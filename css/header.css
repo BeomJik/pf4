@@ -1,0 +1,129 @@
+/* ////////// 상단영역 ////////// */
+header{
+/*   background-color: #eee; */
+  padding-top: 35px;
+  /*! padding-bottom: 35px; */
+position: absolute;
+width: 100%;
+}
+header div.wrap{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  border-top: 2px solid #ffffff4d;
+  border-bottom: 2px solid #ffffff4d;
+  background-color: #ffffff5e;
+}
+header h1{
+
+}
+header h1 a{
+  background: url(../img/hanjikkal_logo.png) no-repeat;
+  width: 300px;
+  height: 100px;
+  display: block;
+  font-size: 0;
+  background-size: 100%;
+  transform: translateY(20px);
+  transition: all 0.3s;
+}
+header h1 a:hover{
+  
+  transform: translateY(20px) scale(1.1);
+}
+header ul.gnb{
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+header ul.gnb li{
+  width: 20%;
+  text-align: center;
+}
+/* header ul.gnb li:hover .sub{
+  display: flex;
+} */
+header ul.gnb li h2{
+  
+}
+header ul.gnb li h2 a{
+  display: block;
+  height: 100%;
+  line-height: 5;
+  font-size: 20px;
+  transition: all 0.5s;
+  color: #fff;
+  text-shadow: 1px 1px 1px #a7a7a7;
+  border-bottom: 5px solid #0000;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+header ul.gnb li h2 a:hover{
+  color: #00529b;
+  border-bottom: 5px solid #00529b;
+  text-shadow: none;
+}
+header ul.gnb li .sub{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  justify-content: space-evenly;
+  background-color: #ffffff5e;
+}
+header ul.gnb li .sub.flex{
+  display: flex;
+}
+header ul.gnb li .sub h3{ 
+  
+}
+header ul.gnb li .sub h3 a{  
+  color: #0a2f87;
+  font-weight: 600;
+  font-size: 20px;
+}
+header ul.gnb li .sub li{  
+  width: 100px;
+}
+header ul.gnb li .sub li a{
+  
+}
+header ul.gnb li .sub li a:hover{
+  text-decoration: underline;
+}
+header ul.enb{
+  display: flex;
+  gap:20px;
+  padding-top:40px;
+}
+header ul.enb li{
+
+}
+header ul.enb li a{
+  font-size: 0px;
+  box-sizing: border-box;
+}
+
+header ul.enb li:nth-child(1) a::before{
+  content: "";
+  background: url(../img/search.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-size: 100%;
+  transition: all 0.3s;
+}
+header ul.enb li:nth-child(2) a::before{
+  content: "";
+  background: url(../img/earth.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-size: 100%;
+  transition: all 0.3s; 
+}
+header ul.enb li:nth-child(n) a:hover::before{ 
+  transform: scale(1.1);
+}
